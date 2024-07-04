@@ -2,10 +2,31 @@
 using namespace std; 
 
 int main(){
-	int arr[] =  {2,5,7,3,2,5,1,10};
+	int arr[] =  {
+		81, 14, 59, 62, 95, 42, 75, 99, 78, 47, 36, 57, 26, 22, 65, 82, 90, 38, 73, 84, 
+		9, 66, 27, 93, 10, 28, 49, 19, 12, 7, 50, 88, 33, 70, 1, 25, 35, 64, 83, 3, 
+		46, 77, 74, 31, 8, 85, 2, 30, 51, 71, 67, 21, 6, 48, 11, 17, 94, 16, 68, 39, 
+		20, 43, 87, 23, 41, 58, 55, 54, 98, 13, 44, 76, 56, 34, 32, 60, 4, 52, 29, 24, 
+		61, 18, 91, 5, 79, 86, 100, 45, 63, 37, 40, 92, 15, 72, 69, 80, 53, 97, 89, 96
+	};
 	int size = sizeof(arr)/sizeof(arr[0]);
-	// sizeof is an operator rather than a function, and its primary function is to determine the size of a data type or an object in bytes at compile-time. Here's a detailed explanation of how sizeof
 	
-	cout << size;
+	for(int i = 0; i < size; i++){
+		for(int j = 0; j < (size-1); j++) {
+			int z = 0;
+			if(arr[j] > arr[j+1]){
+				z = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = z;
+			}
+			// }
+			// cout << arr[j] << " => ";
+		}
+		// cout << arr[i] << endl;
+	}
+
+	for(int i = 0; i < size; i++) {
+		cout << arr[i] << endl;
+	}
 	return 0;
 }
