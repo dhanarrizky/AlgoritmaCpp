@@ -19,10 +19,7 @@ int main(){
 				arr[j] = arr[j+1];
 				arr[j+1] = z;
 			}
-			// }
-			// cout << arr[j] << " => ";
 		}
-		// cout << arr[i] << endl;
 	}
 
 	for(int i = 0; i < size; i++) {
