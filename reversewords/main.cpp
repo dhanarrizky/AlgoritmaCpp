@@ -23,17 +23,18 @@ int main() {
 		int leng = newTxt[i].length();
         if(leng > 0 && leng < 5){
             result += (i == 0 ? "" : " ") + newTxt[i];
-        } else if(leng > 5){
-			string tempStr = newTxt[i];
-			string tempStr2 = "";
-            for(int j = leng; j >= leng; j--){
-				tempStr2 += tempStr[j];
-				cout << "new text : " << tempStr2 << endl;
+        }
+		if(leng > 5){
+			string tempStr = "";
+			string realStr = newTxt[i];
+			for(int j = leng-1; j >= 0; j--){
+				tempStr += realStr[j];
 			}
+			result += (i == 0 ? "" : " ") + newTxt[i];
         }
     }
 	
-	cout << result;
+	cout << "result : " << result;
 	
     return 0;
 }
